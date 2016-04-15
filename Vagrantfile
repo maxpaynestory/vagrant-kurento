@@ -29,6 +29,8 @@ Vagrant.configure(2) do |config|
     apt-get install -y git
     export DEBIAN_FRONTEND=noninteractive
     apt-get install -y kurento-media-server-6.0
+    locale-gen "en_US.UTF-8"
+    dpkg-reconfigure locales
     service kurento-media-server-6.0 start
   EOS
 
